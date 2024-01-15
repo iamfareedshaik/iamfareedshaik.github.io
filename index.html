@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+    <title>Fareed Shaik</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #5751b4;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed;
+            width: 98%;
+            top: 0;
+            height: 30px;
+            margin-right: 4rem;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            color: #E0F7FA;
+            font-weight: bold;
+            padding: 10px;
+            margin-right: 20px;
+        }
+
+        .title {
+            font-size: 24px;
+            margin: 0;
+            color: #E0F7FA;
+        }
+
+        .tabs {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            max-width: 60%;
+        }
+
+        .tab {
+            color: #E0F7FA;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 10px;
+            transition: border-bottom 0.3s ease;
+        }
+
+        .tab:hover {
+            border-bottom: 2px solid #E0F7FA;
+        }
+
+        .content {
+            display: flex;
+            width: 100%;
+            margin-top: 80px;
+            height: 90vh;
+        }
+
+        .left-section {
+            width: 30%;
+            background-color: #ffffff;
+            padding: 20px;
+        }
+
+        .general-info img {
+            width: 80%;
+            border-radius: 2rem;
+        }
+
+        .right-section {
+            width: 70%;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        .role {
+            margin-left: 2rem;
+        }
+
+        .role h2 {
+            color: #5751b4;
+        }
+
+        .role p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .skills {
+            margin-top: 2rem;
+        }
+
+        .skills h2 {
+            color: #5751b4;
+        }
+
+        .skills-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 1rem;
+        }
+
+        .card {
+            width: calc(20% - 1rem);
+            background-color: #ffffff;
+            padding: 20px;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h3 {
+            color: #5751b4;
+        }
+
+        .card li {
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+
+        .experience {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+        }
+
+        .berkadia-date {
+            margin-left: 2rem;
+        }
+
+        .job-details {
+            width: 70%;
+            padding-left: 1rem;
+        }
+
+        .job-title {
+            color: #5751b4;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .bullet-points {
+            list-style-type: square;
+            padding-left: 1rem;
+            color: #555;
+        }
+
+        .role {
+            text-align: justify;
+        }
+
+        @media (max-width: 1300px) {
+            .tabs {
+                display: none;
+            }
+
+            .title {
+                display: none;
+            }
+
+            .nav-btn {
+                margin-right: 1rem;
+            }
+
+            .skills-cards {
+                justify-content: space-between;
+            }
+
+            .card {
+                width: calc(40% - 1rem);
+            }
+
+            .right-section {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 800px) {
+            .tabs {
+                display: none;
+            }
+
+            .title {
+                display: none;
+            }
+
+            .card {
+                width: 80%;
+            }
+
+            .content {
+                flex-direction: column;
+            }
+
+            .left-section,
+            .right-section {
+                width: 100%;
+            }
+
+            .general-info img {
+                width: 30%;
+                border-radius: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="brand">
+            <div class="logo">Fareed Shaik</div>
+        </div>
+        <div class="title"><span class="subtitle">Master's in Information Science</span></div>
+        <div class="tabs">
+            <a href="#skills" class="tab">Skills</a>
+            <a href="#experience" class="tab">Experience</a>
+            <a href="#education" class="tab">Education</a>
+            <a href="#portfolio" class="tab">Portfolio</a>
+            <a href="#contact" class="tab">Contact</a>
+        </div>
+        <button type="button" class="btn nav-btn" onclick="toggleMenu()">
+            <i class="fas fa-align-justify"></i>
+        </button>
+    </header>
+
+    <div class="content">
+        <div class="left-section">
+            <div class="general-info">
+                <img src="./Fareed Shaik.jpeg" />
+                <h2>General Information</h2>
+                <p>Name: Fareed Shaik</p>
+                <p>Date Of Birth: October 30, 1998</p>
+                <p>Phone Number: +1 605 671 9550</p>
+                <p>Email: Fareed.Shaik@trojans.dsu.edu</p>
+                <p>Location: 819, N Summit Ave, Madison, South Dakota, 57042</p>
+            </div>
+        </div>
+        <div class="right-section">
+            <div class="role">
+                <h2>Full Stack Developer</h2>
+                <p>Experienced software engineer with 4+ years of development expertise in web-based apps utilizing
+                    React,
+                    Node.js, and SQL. Proficient in full-stack development and experienced in Agile methodology. Known
+                    for
+                    efficient work across multiple teams in different domains. I have a proven track record of
+                    delivering significant
+                    cost savings to the company through challenging proof-of-concepts (POC). Detail-oriented, organized,
+                    and
+                    meticulous employee. Works at a fast pace to meet tight deadlines. Enthusiastic team player, ready
+                    to contribute
+                    to company success.</p>
+                <div class="skills">
+                    <h2>Skills</h2>
+                    <div class="skills-cards">
+                        <div class="card">
+                            <h3>Frontend</h3>
+                            <ul>
+                                <li>React.js</li>
+                                <li>React Native</li>
+                                <li>JavaScript</li>
+                                <li>HTML5</li>
+                                <li>CSS3</li>
+                            </ul>
+                        </div>
+                        <div class="card">
+                            <h3>Backend</h3>
+                            <ul>
+                                <li>Node.js</li>
+                                <li>Express</li>
+                                <li>Java</li>
+                                <li>Spring</li>
+                                <li>Python</li>
+                            </ul>
+                        </div>
+                        <div class="card">
+                            <h3>Database</h3>
+                            <ul>
+                                <li>MySQL</li>
+                                <li>PostgreSQL</li>
+                                <li>MongoDB</li>
+                            </ul>
+                        </div>
+                        <div class="card">
+                            <h3>Development Toolkit.</h3>
+                            <ul>
+                                <li>Docker</li>
+                                <li>GitHub</li>
+                                <li>AWS Cloud</li>
+                                <li>Design Patterns</li>
+                                <li>Figma</li>
+                                <li>Agile</li>
+                                <li>Water Fall</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- <div class="fareed-experince">
+        <div class="experience">
+            <div class="berkadia-date">
+                08 / 22 / 2023 to 05 / 01 / 2024
+            </div>
+            <div class="job-details">
+                <div class="job-title">Dakota State University - Graduate Assistant</div>
+                <ul class="bullet-points">
+                    <li>Developed a web application that incorporates the ChatGPT API to seamlessly process uploaded
+                        documents. </li>
+                    <li>Contributed to multiple research projects alongside Professor.</li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <div class="experience">
+                <div class="berkadia-date">
+                    09 / 16 / 2022 to 07 / 21 / 2023
+                </div>
+                <div class="job-details">
+                    <div class="job-title">Berkadia - Software Engineer</div>
+                    <ul class="bullet-points">
+                        <li>I have good experience in the Commercial Real Estate domain at Berkadia.</li>
+                        <li>I possess knowledge and skills in integrating React into a Microsoft Excel add-in.</li>
+                        <li>I have experience integrating Keycloak authentication into a React application and
+                            communicating with the existing .NET backend for a reset application.</li>
+                        <li>I have hands-on experience working on feature enhancements using .NET and Knockout.js
+                            application.</li>
+                        <li>My previous work includes successfully developing a React application from Initial Stages.
+                        </li>
+                        <li>I have received recognition for taking on challenging work, proactively analyzing, and
+                            fixing production bugs, and consistently delivering before deadlines, as evidenced I
+                            received a Hi-fi award.</li>
+                        <li>I had the opportunity to work with various AWS services such as S3 buckets, Cloud Watch
+                            analysis, log checking, and managing Docker images through the Elastic Container Registry.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="experience">
+                <div class="berkadia-date">
+                    08 / 05 / 2020 to 09 / 14 / 2022
+                </div>
+                <div class="job-details">
+                    <div class="job-title">Legato Health Technologies - Software Engineer</div>
+                    <ul class="bullet-points">
+                        <li>I have extensive experience working on projects in the health insurance domain while working
+                            for Anthem</li>
+                        <li>I have a background in working on healthcare systems using mainframe technologies such as
+                            JCL and COBOL, having started with this field.</li>
+                        <li>As my career progressed, I transitioned to developing POCs for Medicare claim system
+                            development, including the use of a web application developed with React, Node.js, and RDBMS
+                            to pay surcharges.</li>
+                        <li>I was part of a team for the development of an Onsite clinic web application, which involved
+                            migrating the application from Mainframe to a React and Node.js-based platform.</li>
+                        <li>I developed an innovative automated bot using Python that analyzed the number of claims that
+                            failed to process and generated daily reports, allowing for a better analysis of Insurance
+                            claims.</li>
+                        <li>I was recognized with award "Rising Superstar" in recognition of my outstanding
+                            contributions and dedication to the company.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="experience">
+                <div class="berkadia-date">
+                    06 / 10 / 2019 to 05 / 10 / 2020
+                </div>
+                <div class="job-details">
+                    <div class="job-title">Omkara Vijayalakshmi Strips - Associate Software Engineer</div>
+                    <ul class="bullet-points">
+                        <li>I began my career as an Associate Software Developer, focusing on frontend development using
+                            HTML, CSS, and JavaScript. I actively participated in an agile team environment.</li>
+                        <li>I have collaborated with Team in developing Backend and deploying application into Aws,
+                            where I have worked with S3 buckets, Aws Elastic Container Registry.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div> -->
+        <script>
+            function toggleMenu() {
+                const tabs = document.querySelector('.tabs');
+                tabs.classList.toggle('show');
+            }
+        </script>
+</body>
+
+</html>
