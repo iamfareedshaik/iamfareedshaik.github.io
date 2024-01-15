@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <title>Fareed Shaik</title>
     <style>
         body {
@@ -177,7 +178,18 @@
             font-size: 20px;
             font-weight: bold;
         }
+        .open-menu{
+            margin-right: 2rem;
+            display: none;
+        }
+
         @media (max-width: 1300px) {
+            .open-menu{
+                display: block;
+            }
+            .open-menu i {
+                float: right;
+            }
             .tabs {
                 display: none;
                 flex-direction: column;
@@ -207,6 +219,12 @@
         }
 
         @media (max-width: 800px) {
+            .open-menu{
+                display: block;   
+            }
+            .open-menu i {
+                float: right;
+            }
             .tabs {
                 display: none;
                 flex-direction: column;
@@ -252,8 +270,9 @@
             <div class="logo">Fareed Shaik</div>
         </div>
         <div class="title">Master's in Information Science</div>
-        <div class="tabs">
-            <i class="fa fa-bars" aria-hidden="true"></i>
+        <label for="check" class="open-menu" onclick="toggleMenu()"><i class="fas fa-bars"></i></label>
+        <div class="tabs" id="tabs">
+            <i class="close-menu fas fa-window-close" onclick="toggleMenu()"></i>
             <a href="#skills" class="tab">Skills</a>
             <a href="#experience" class="tab">Experience</a>
             <a href="#education" class="tab">Education</a>
@@ -266,6 +285,8 @@
         <div class="left-section">
             <div class="general-info">
                 <img src="./Fareed Shaik.jpeg" />
+                <br/>
+                <div class="resume-download"><a class="btn line-btn-dark btn-icon btn-radius" href="./Resume_latest.pdf" title="Download Resume" download>Download Resume</a></div>
                 <h2>General Information</h2>
                 <p>Name: Fareed Shaik</p>
                 <p>Date Of Birth: October 30, 1998</p>
@@ -417,12 +438,21 @@
         </div>
     </div>
     
-        <script>
-            function toggleMenu() {
-                const tabs = document.querySelector('.tabs');
-                tabs.classList.style.display = 'none'
+    <script>
+        function toggleMenu() {
+            const tabs = document.getElementById('tabs');
+
+            if(tabs.style.display === '' || tabs.style.display === 'none'){
+                document.getElementById("tabs").style.display = 'flex'
+                document.querySelector('.open-menu').style.display = 'none'
+            }else{
+                document.getElementById("tabs").style.display = 'none'
+                document.querySelector('.open-menu').style.display = 'block'
             }
-        </script>
+            
+        }
+    </script>
+    
 </body>
 
 </html>
